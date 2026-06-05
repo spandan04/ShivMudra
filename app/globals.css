@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+@theme {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-background: #fafaf8;
+  --color-foreground: #0b2341;
+  --color-card: #ffffff;
+  --color-card-foreground: #1a1a1a;
+  --color-muted: #f0f0ee;
+  --color-muted-foreground: #657084;
+  --color-border: #e2e4e8;
+  --color-input: #dcdde2;
+  --color-ring: #ff9933;
+  --color-primary: #0b2341;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #f0f0ee;
+  --color-secondary-foreground: #0b2341;
+  --color-accent: #f5f0e6;
+  --color-accent-foreground: #0b2341;
+  --color-destructive: #ef3b2d;
+  --color-destructive-foreground: #ffffff;
+  --color-success: #10b981;
+}
+
+:root {
+  --background: #fafaf8;
+  --foreground: #1a1a1a;
+  --navy: #0b2341;
+  --navy-soft: #17365d;
+  --gold: #ff9933;
+  --gold-soft: #efe5d1;
+  --ink-muted: #657084;
+  --line: #e2e4e8;
+  --surface: #ffffff;
+  --success: #10b981;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  /* Fonts will be applied via Next.js layout */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(200, 164, 93, 0.25);
+  color: var(--navy);
+}
+
+.section-shell {
+  margin-inline: auto;
+  width: min(1280px, calc(100% - 48px)); /* Increased max width for premium feel */
+}
+
+/* Premium Shadows & Depth */
+.premium-card {
+  border: 1px solid rgba(11, 35, 65, 0.08);
+  background: #ffffff;
+  box-shadow: 0 8px 32px -4px rgba(11, 35, 65, 0.08), 0 24px 64px -8px rgba(11, 35, 65, 0.1);
+  transition: box-shadow 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.premium-card:hover {
+  box-shadow: 0 20px 48px -4px rgba(11, 35, 65, 0.12), 0 32px 80px -8px rgba(11, 35, 65, 0.15);
+}
+
+.premium-glass {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 12px 40px rgba(11, 35, 65, 0.08);
+}
+
+.champagne-gradient {
+  background: linear-gradient(135deg, #EAD7B0 0%, #D8BE8A 50%, #B89656 100%);
+}
+
+.champagne-gradient-text {
+  background: linear-gradient(135deg, #EAD7B0 0%, #D8BE8A 50%, #B89656 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #D8BE8A; /* fallback */
+}
+
+.gold-text {
+  color: var(--gold);
+}
+
+.navy-gradient {
+  background: linear-gradient(145deg, #071a32 0%, #0b2341 45%, #17365d 100%);
+}
+
+.on-navy {
+  color: #ffffff !important;
+}
+
+.on-navy-muted {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.subtle-grid {
+  background-image:
+    linear-gradient(rgba(11, 35, 65, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11, 35, 65, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Elegant Underline Hover */
+.gold-underline {
+  position: relative;
+  width: fit-content;
+}
+
+.gold-underline::after {
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  content: "";
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .gold-underline::after,
+.gold-underline:hover::after {
+  width: 100%;
+}
+
+.chart-tooltip {
+  border-radius: 6px;
+  border: 1px solid rgba(11, 35, 65, 0.08);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 12px 32px rgba(11, 35, 65, 0.08);
+  color: #1a1a1a;
+  font-size: 0.875rem;
+  padding: 8px 12px;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
