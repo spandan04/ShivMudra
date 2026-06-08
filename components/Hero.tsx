@@ -2,95 +2,26 @@
 
 import { ArrowRight, CalendarDays, IndianRupee, Sparkles, TrendingUp } from "lucide-react";
 import { stats } from "@/lib/data";
-import { MotionDiv, fadeUp, fadeUpDelayed, stagger, MotionA, springScale, CountUp, MotionG, MotionCircle } from "./Motion";
+import Image from "next/image";
+import { MotionDiv, fadeUp, fadeUpDelayed, stagger, MotionA, springScale, CountUp } from "./Motion";
 
 function WealthIllustration() {
   return (
     <MotionDiv 
       animate={{ y: [0, -8, 0] }}
       transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-      className="relative h-[360px] overflow-hidden rounded-xl border border-[#E2E4E8] bg-[#ffffff] shadow-[0_16px_48px_-8px_rgba(11,35,65,0.06)] md:h-[460px]"
+      className="relative flex h-[360px] items-center justify-center md:h-[500px] w-full"
     >
-      <div className="absolute inset-0 subtle-grid opacity-60" />
-      <div className="absolute left-8 top-8 premium-glass rounded-full px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#D8BE8A]">
-        Active Portfolio
+      <div className="relative h-full w-full max-w-lg lg:max-w-xl">
+        <Image 
+          src="/hero-image.png" 
+          alt="Wealth Management Growth" 
+          fill
+          className="object-contain drop-shadow-2xl"
+          priority
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
       </div>
-      <div className="absolute bottom-12 left-8 right-8 flex items-end justify-center gap-6 md:gap-8">
-        {[100, 150, 190, 250, 310].map((height, index) => (
-          <div key={height} className="relative flex flex-col items-center">
-            <MotionDiv
-              initial={{ height: 0 }}
-              animate={{ height }}
-              transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.5 + index * 0.1 }}
-              className={`w-12 rounded-t-lg shadow-md md:w-16 ${
-                index % 2 ? "bg-[#D8BE8A]" : "bg-[#0B2341]"
-              }`}
-            />
-            <span className="mt-4 h-2 w-16 rounded-full bg-[#0B2341]/5" />
-          </div>
-        ))}
-      </div>
-      <svg
-        className="absolute inset-x-8 bottom-32 h-52 w-[calc(100%-4rem)] overflow-visible"
-        viewBox="0 0 520 180"
-        fill="none"
-        aria-hidden="true"
-      >
-        <MotionG
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{ duration: 2, ease: "easeInOut", delay: 0.5 }}
-        >
-          <path
-            d="M8 148 C70 118 108 132 154 96 C205 56 245 78 296 52 C350 25 390 58 450 20 L512 8"
-            stroke="#FF9933"
-            strokeWidth="12"
-            strokeLinecap="round"
-            opacity="0.1"
-          />
-          <path
-            d="M8 148 C70 118 108 132 154 96 C205 56 245 78 296 52 C350 25 390 58 450 20 L512 8"
-            stroke="#0B2341"
-            strokeWidth="3.5"
-            strokeLinecap="round"
-          />
-        </MotionG>
-        {[8, 154, 296, 450, 512].map((cx, index) => (
-          <MotionCircle
-            key={cx}
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ type: "spring", delay: 1 + index * 0.15 }}
-            cx={cx}
-            cy={[148, 96, 52, 20, 8][index]}
-            r="6"
-            fill="#ffffff"
-            stroke="#0B2341"
-            strokeWidth="3"
-            className="shadow-sm"
-          />
-        ))}
-      </svg>
-      <MotionDiv 
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ type: "spring", stiffness: 200, damping: 20, delay: 0.8 }}
-        className="absolute right-10 top-16 grid size-16 place-items-center rounded-full bg-gradient-to-br from-[#FF9933] to-[#E67E22] text-[#ffffff] shadow-xl"
-      >
-        <IndianRupee size={26} strokeWidth={2} />
-      </MotionDiv>
-      <MotionDiv 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ type: "spring", stiffness: 200, damping: 20, delay: 1.2 }}
-        className="absolute bottom-10 right-10 flex items-center gap-4 rounded-lg premium-glass px-5 py-4 shadow-lg"
-      >
-        <TrendingUp className="text-[#10B981]" size={22} strokeWidth={2} />
-        <div>
-          <p className="text-[10px] font-bold uppercase tracking-wider text-[#657084]">YTD Growth</p>
-          <p className="text-xl font-bold text-[#0B2341]">+12.8%</p>
-        </div>
-      </MotionDiv>
     </MotionDiv>
   );
 }
