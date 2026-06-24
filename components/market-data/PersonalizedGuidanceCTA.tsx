@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, CalendarDays, PhoneCall } from "lucide-react";
+import { CalendarDays, PhoneCall } from "lucide-react";
 
 export function PersonalizedGuidanceCTA() {
   return (
@@ -22,7 +22,7 @@ export function PersonalizedGuidanceCTA() {
               Need Personalized Market <span className="champagne-gradient-text">Guidance?</span>
             </h2>
             <p className="text-lg text-white/80 mb-10 max-w-2xl mx-auto">
-              Speak with Shiv Mudra's investment experts to interpret these market trends and build a wealth strategy tailored precisely to your long-term goals.
+              Speak with Shiv Mudra&apos;s investment experts to interpret these market trends and build a wealth strategy tailored precisely to your long-term goals.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

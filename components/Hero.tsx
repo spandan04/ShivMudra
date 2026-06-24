@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, CalendarDays, IndianRupee, Sparkles, TrendingUp } from "lucide-react";
+import { ArrowRight, CalendarDays, Sparkles } from "lucide-react";
 import { stats } from "@/lib/data";
 import Image from "next/image";
 import { MotionDiv, fadeUp, fadeUpDelayed, stagger, MotionA, springScale, CountUp } from "./Motion";

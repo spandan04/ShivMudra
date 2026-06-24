@@ -2,6 +2,7 @@
 
 import { Menu, Search, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { navItems } from "@/lib/data";
 import { MotionHeader, MotionA, MotionButton, MotionDiv, AnimatePresence, springScale } from "./Motion";
@@ -29,7 +30,7 @@ export function Header() {
       style={{ transitionProperty: "background-color, border-color, backdrop-filter, box-shadow" }}
     >
       <div className="section-shell flex h-24 items-center justify-between gap-5">
-        <a href="/" className="flex min-w-0 items-center">
+        <Link href="/" className="flex min-w-0 items-center">
           <Image
             src="/logo.png"
             alt="Shiv Mudra Wealth Management LLP"
@@ -38,7 +39,7 @@ export function Header() {
             className="h-14 w-auto"
             priority
           />
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-10 lg:flex">
           {navItems.map((item) => (

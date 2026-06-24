@@ -38,7 +38,6 @@ export function FeaturedSolutions() {
           className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-4"
         >
           {solutions.map((solution) => {
-            const Icon = solution.icon;
             return (
               <MotionDiv
                 variants={fadeUp}

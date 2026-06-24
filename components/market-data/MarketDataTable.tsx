@@ -27,7 +27,7 @@ export function MarketDataTable() {
   };
 
   // Filter and Search logic
-  let filteredData = tableData.filter((item) => {
+  const filteredData = tableData.filter((item) => {
     if (filter === "Gainers" && item.changePercent <= 0) return false;
     if (filter === "Losers" && item.changePercent >= 0) return false;
     if (search && !item.name.toLowerCase().includes(search.toLowerCase())) return false;
@@ -83,7 +83,7 @@ export function MarketDataTable() {
                   {["All", "Gainers", "Losers"].map((f) => (
                     <button
                       key={f}
-                      onClick={() => { setFilter(f as any); setPage(1); }}
+                      onClick={() => { setFilter(f as "Gainers" | "Losers" | "All"); setPage(1); }}
                       className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${filter === f ? "bg-[#0B2341] text-[#ffffff]" : "bg-[#fafaf8] text-[#657084] hover:bg-[#E2E4E8]/50"}`}
                     >
                       {f}

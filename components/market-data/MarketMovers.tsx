@@ -24,7 +24,7 @@ export function MarketMovers() {
               </button>
             </div>
             <div className="space-y-2">
-              {topGainers.map((stock, i) => (
+              {topGainers.map((stock) => (
                 <div key={stock.ticker} className="flex items-center justify-between p-3 hover:bg-[#fafaf8] rounded-lg transition-colors group">
                   <div className="flex items-center gap-4">
                     <div className="h-10 w-10 rounded-full bg-[#E2E4E8] text-[#0B2341] flex items-center justify-center font-bold text-sm">
@@ -58,7 +58,7 @@ export function MarketMovers() {
               </button>
             </div>
             <div className="space-y-2">
-              {topLosers.map((stock, i) => (
+              {topLosers.map((stock) => (
                 <div key={stock.ticker} className="flex items-center justify-between p-3 hover:bg-[#fafaf8] rounded-lg transition-colors group">
                   <div className="flex items-center gap-4">
                     <div className="h-10 w-10 rounded-full bg-[#E2E4E8] text-[#0B2341] flex items-center justify-center font-bold text-sm">

@@ -1,6 +1,5 @@
 import {
   Award,
-  BarChart3,
   BriefcaseBusiness,
   Eye,
   GraduationCap,

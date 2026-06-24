@@ -7,8 +7,9 @@ import { ServiceSidebar } from "@/components/services/ServiceSidebar";
 import { ServiceContent } from "@/components/services/ServiceContent";
 import { getServiceDetail } from "@/lib/services-mock-data";
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const service = getServiceDetail(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const service = getServiceDetail(slug);
   if (!service) return { title: "Service Not Found" };
   
   return {
@@ -17,8 +18,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function ServiceDetailsPage({ params }: { params: { slug: string } }) {
-  const serviceData = getServiceDetail(params.slug);
+export default async function ServiceDetailsPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const serviceData = getServiceDetail(slug);
 
   if (!serviceData) {
     notFound();
