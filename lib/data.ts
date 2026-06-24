@@ -16,11 +16,11 @@ import {
 } from "lucide-react";
 
 export const navItems = [
-  { label: "Market Data", href: "#market-data" },
-  { label: "Wealth Services", href: "#wealth-services" },
-  { label: "Advisory", href: "#advisory" },
-  { label: "About Us", href: "#about" },
-  { label: "Contact", href: "#contact" }
+  { label: "Market Data", href: "/market-data" },
+  { label: "Wealth Services", href: "/services" },
+  { label: "Advisory", href: "/#advisory" },
+  { label: "About Us", href: "/#about" },
+  { label: "Contact", href: "/#contact" }
 ];
 
 export const marketCards = [
@@ -54,7 +54,7 @@ export const marketCards = [
   }
 ];
 
-export const services = [
+export const homeServices = [
   {
     title: "Investment Solutions",
     icon: TrendingUp,
@@ -81,8 +81,41 @@ export const services = [
     items: [
       { label: "Insurance Advisory", href: "https://irdai.gov.in/" },
       { label: "Tax Planning", href: "https://www.incometax.gov.in/" },
-      { label: "Estate Planning", href: "https://www.india.gov.in/topics/law-justice" },
+      { label: "Bonds", href: "https://www.rbi.org.in/" },
       { label: "Demat Account Opening", href: "https://www.cdslindia.com/" }
+    ]
+  }
+];
+
+export const services = [
+  {
+    title: "Investment Solutions",
+    icon: TrendingUp,
+    items: [
+      { label: "Mutual Funds", href: "/services/mutual-funds" },
+      { label: "SIP Planning", href: "/services/sip-planning" },
+      { label: "Equity Investments", href: "/services/equity-investments" },
+      { label: "Fixed Income", href: "/services/fixed-income" }
+    ]
+  },
+  {
+    title: "Wealth Advisory",
+    icon: Landmark,
+    items: [
+      { label: "Wealth Management", href: "/services/wealth-management" },
+      { label: "Portfolio Management", href: "/services/portfolio-management" },
+      { label: "Retirement Planning", href: "/services/retirement-planning" },
+      { label: "Goal-Based Investing", href: "/services/goal-based-investing" }
+    ]
+  },
+  {
+    title: "Financial Protection",
+    icon: ShieldCheck,
+    items: [
+      { label: "Insurance Advisory", href: "/services/insurance-advisory" },
+      { label: "Tax Planning", href: "/services/tax-planning" },
+      { label: "Bonds", href: "/services/bonds" },
+      { label: "Demat Account Opening", href: "/services/demat-account-opening" }
     ]
   }
 ];

@@ -54,6 +54,42 @@ const indianMarketTrends = [
     price: 89240,
     currency: "INR",
     changePercent: 0.18
+  },
+  {
+    ticker: "CRUDEOIL",
+    name: "Crude Oil",
+    logoUrl:
+      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=120&q=80",
+    price: 6645,
+    currency: "INR",
+    changePercent: 1.25
+  },
+  {
+    ticker: "LEAD",
+    name: "Lead Mini",
+    logoUrl:
+      "https://images.unsplash.com/photo-1590080876403-12503521b761?auto=format&fit=crop&w=120&q=80",
+    price: 194.50,
+    currency: "INR",
+    changePercent: -0.45
+  },
+  {
+    ticker: "ZINC",
+    name: "Zinc Mini",
+    logoUrl:
+      "https://images.unsplash.com/photo-1581577931341-3eb5ba3b22b1?auto=format&fit=crop&w=120&q=80",
+    price: 265.80,
+    currency: "INR",
+    changePercent: 0.80
+  },
+  {
+    ticker: "ALUMINIUM",
+    name: "Aluminium Mini",
+    logoUrl:
+      "https://images.unsplash.com/photo-1517420879524-86d3e8b515d2?auto=format&fit=crop&w=120&q=80",
+    price: 235.10,
+    currency: "INR",
+    changePercent: 0.35
   }
 ];
 

@@ -29,7 +29,7 @@ export function Header() {
       style={{ transitionProperty: "background-color, border-color, backdrop-filter, box-shadow" }}
     >
       <div className="section-shell flex h-24 items-center justify-between gap-5">
-        <a href="#" className="flex min-w-0 items-center">
+        <a href="/" className="flex min-w-0 items-center">
           <Image
             src="/logo.png"
             alt="Shiv Mudra Wealth Management LLP"

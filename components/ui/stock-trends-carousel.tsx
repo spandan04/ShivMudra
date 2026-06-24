@@ -156,7 +156,7 @@ export const StockTrendsCarousel = React.forwardRef<
           ))}
         </motion.div>
 
-        <div className="absolute left-0 top-1/2 hidden -translate-y-1/2 md:block z-10 pl-2">
+        <div className="absolute -left-6 top-1/2 hidden -translate-y-1/2 md:block z-10">
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <Button
               variant="outline"
@@ -170,7 +170,7 @@ export const StockTrendsCarousel = React.forwardRef<
           </motion.div>
         </div>
 
-        <div className="absolute right-0 top-1/2 hidden -translate-y-1/2 md:block z-10 pr-2">
+        <div className="absolute -right-6 top-1/2 hidden -translate-y-1/2 md:block z-10">
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <Button
               variant="outline"

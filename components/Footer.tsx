@@ -67,7 +67,7 @@ export function Footer() {
           <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-[#ffffff]/70">
             <p className="flex gap-4 group">
               <MapPin size={20} strokeWidth={1.5} className="mt-1 shrink-0 text-[#ffffff]/40 transition-colors group-hover:text-[#D8BE8A]" />
-              123 Financial District, Mumbai, Maharashtra 400001
+              Office No. 112, 1st Floor, Plot 95-C Hind Rajasthan Commercial Premises, Dadasaheb Phalke Road, Dadar East Dadar Mumbai Maharashtra India 400014
             </p>
             <p className="flex gap-4 group">
               <Mail size={20} strokeWidth={1.5} className="mt-1 shrink-0 text-[#ffffff]/40 transition-colors group-hover:text-[#D8BE8A]" />

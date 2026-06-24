@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-import { services } from "@/lib/data";
+import { homeServices } from "@/lib/data";
 import { MotionDiv, fadeUp, stagger } from "./Motion";
 
 export function Services() {
@@ -28,7 +28,7 @@ export function Services() {
           viewport={{ once: true, margin: "-50px" }}
           className="mt-20 grid gap-8 lg:grid-cols-3"
         >
-          {services.map((service) => {
+          {homeServices.map((service) => {
             const Icon = service.icon;
             return (
               <MotionDiv
