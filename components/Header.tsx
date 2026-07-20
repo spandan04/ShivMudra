@@ -29,19 +29,19 @@ export function Header() {
       }`}
       style={{ transitionProperty: "background-color, border-color, backdrop-filter, box-shadow" }}
     >
-      <div className="section-shell flex h-24 items-center justify-between gap-5">
-        <Link href="/" className="flex min-w-0 items-center">
+      <div className="section-shell flex h-20 items-center justify-between gap-6">
+        <Link href="/" className="flex min-w-0 items-center py-2">
           <Image
-            src="/logo.png"
+            src="/logo-new.png"
             alt="Shiv Mudra Wealth Management LLP"
-            width={180}
-            height={56}
-            className="h-14 w-auto"
+            width={240}
+            height={72}
+            className="w-32 sm:w-40 md:w-[180px] lg:w-[200px] h-auto object-contain"
             priority
           />
         </Link>
 
-        <nav className="hidden items-center gap-10 lg:flex">
+        <nav className="hidden items-center gap-8 lg:flex">
           {navItems.map((item) => (
             <MotionA
               key={item.label}
@@ -55,13 +55,13 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-4 lg:flex">
+        <div className="hidden items-center gap-3 lg:flex">
           <MotionButton
             aria-label="Search"
             variants={springScale}
             whileHover="hover"
             whileTap="tap"
-            className="grid size-11 place-items-center rounded border border-[#E2E4E8] bg-transparent text-[#0B2341] transition-colors hover:border-[#D8BE8A] hover:text-[#D8BE8A]"
+            className="grid size-11 place-items-center rounded-md border border-[#E2E4E8] bg-white text-[#0B2341] transition-colors hover:border-[#D8BE8A] hover:text-[#D8BE8A]"
           >
             <Search size={18} strokeWidth={1.5} />
           </MotionButton>
@@ -70,7 +70,7 @@ export function Header() {
             variants={springScale}
             whileHover="hover"
             whileTap="tap"
-            className="rounded border border-[#E2E4E8] px-6 py-3 text-xs font-bold uppercase tracking-wider text-[#0B2341] transition-colors hover:border-[#D8BE8A] hover:text-[#D8BE8A]"
+            className="rounded-md border border-[#E2E4E8] bg-white px-6 py-3 text-xs font-bold uppercase tracking-wider text-[#0B2341] transition-colors hover:border-[#D8BE8A] hover:text-[#D8BE8A]"
           >
             Client Login
           </MotionA>
@@ -79,8 +79,7 @@ export function Header() {
             variants={springScale}
             whileHover="hover"
             whileTap="tap"
-            className="rounded bg-[#0B2341] px-6 py-3 text-xs font-bold uppercase tracking-wider !text-[#ffffff] shadow-[0_4px_14px_rgba(11,35,65,0.2)] transition-colors hover:bg-[#17365D]"
-            style={{ color: '#ffffff' }}
+            className="rounded-md bg-[#0B2341] px-6 py-3 text-xs font-bold uppercase tracking-wider text-white shadow-sm transition-colors hover:bg-[#17365D]"
           >
             Start Consultation
           </MotionA>

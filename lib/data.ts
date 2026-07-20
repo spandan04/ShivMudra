@@ -17,8 +17,8 @@ import {
 export const navItems = [
   { label: "Market Data", href: "/market-data" },
   { label: "Wealth Services", href: "/services" },
-  { label: "Advisory", href: "/#advisory" },
-  { label: "About Us", href: "/#about" },
+  { label: "Advisory", href: "/advisory" },
+  { label: "About Us", href: "/about" },
   { label: "Contact", href: "/#contact" }
 ];
 

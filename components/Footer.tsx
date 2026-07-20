@@ -17,11 +17,11 @@ export function Footer() {
       >
         <MotionDiv variants={fadeUp}>
           <Image
-            src="/logo.png"
+            src="/logo-new.png"
             alt="Shiv Mudra Wealth Management LLP"
-            width={180}
-            height={56}
-            className="h-14 w-auto"
+            width={240}
+            height={72}
+            className="w-40 sm:w-48 md:w-[200px] lg:w-[220px] h-auto object-contain bg-white p-2 shadow-sm rounded-xl"
           />
           <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-[#ffffff]/70">
             Empowering your financial future with tailored wealth management

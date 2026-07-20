@@ -21,6 +21,14 @@
   --color-destructive: #ef3b2d;
   --color-destructive-foreground: #ffffff;
   --color-success: #10b981;
+  
+  --color-navy: #0b2341;
+  --color-navy-soft: #17365d;
+  --color-gold: #ff9933;
+  --color-gold-soft: #efe5d1;
+  --color-ink-muted: #657084;
+  --color-line: #e2e4e8;
+  --color-surface: #ffffff;
 }
 
 :root {
@@ -44,23 +52,25 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  margin: 0;
-  background: var(--background);
-  color: var(--foreground);
-  /* Fonts will be applied via Next.js layout */
-}
+@layer base {
+  body {
+    margin: 0;
+    background: var(--background);
+    color: var(--foreground);
+    /* Fonts will be applied via Next.js layout */
+  }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
-button,
-input,
-select,
-textarea {
-  font: inherit;
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
 }
 
 ::selection {

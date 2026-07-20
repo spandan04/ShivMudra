@@ -14,7 +14,7 @@ function WealthIllustration() {
     >
       <div className="relative h-full w-full max-w-lg lg:max-w-xl">
         <Image 
-          src="/hero-image.png" 
+          src="/hero-image-new-2.png" 
           alt="Wealth Management Growth" 
           fill
           className="object-contain drop-shadow-2xl"
@@ -28,7 +28,7 @@ function WealthIllustration() {
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#FAFAF8] pb-24 pt-24 md:pb-32 md:pt-32">
+    <section className="relative overflow-hidden bg-[#FAFAF8] pb-24 pt-8 md:pb-32 md:pt-12">
       <div className="absolute -right-32 top-0 h-[600px] w-[600px] rounded-full border border-[#E2E4E8] opacity-50" />
       <div className="absolute left-0 top-32 h-px w-full bg-gradient-to-r from-transparent via-[#E2E4E8] to-transparent" />
       <MotionDiv
