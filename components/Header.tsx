@@ -32,7 +32,7 @@ export function Header() {
       <div className="section-shell flex h-20 items-center justify-between gap-6">
         <Link href="/" className="flex min-w-0 items-center py-2">
           <Image
-            src="/logo-new.png"
+            src="/custom-logo.png"
             alt="Shiv Mudra Wealth Management LLP"
             width={240}
             height={72}

@@ -17,7 +17,7 @@ import {
 export const navItems = [
   { label: "Market Data", href: "/market-data" },
   { label: "Wealth Services", href: "/services" },
-  { label: "Advisory", href: "/advisory" },
+  { label: "NRI", href: "/nri-corner" },
   { label: "About Us", href: "/about" },
   { label: "Contact", href: "/#contact" }
 ];
@@ -257,15 +257,29 @@ export const testimonials = [
 export const footerColumns = [
   {
     title: "Company",
-    links: ["About Us", "Our Philosophy", "Leadership", "Compliance"]
+    links: [
+      { label: "About Us", href: "/about" },
+      { label: "Our Philosophy", href: "/about#philosophy" },
+      { label: "Leadership", href: "/about#our-journey" },
+      { label: "Compliance", href: "#" }
+    ]
   },
   {
     title: "Services",
-    links: ["Mutual Funds", "Portfolio Advisory", "Insurance", "Estate Planning"]
+    links: [
+      { label: "Mutual Funds", href: "/services/mutual-funds" },
+      { label: "Portfolio Advisory", href: "/services/portfolio-management" },
+      { label: "Insurance", href: "/services/insurance-advisory" }
+    ]
   },
   {
     title: "Resources",
-    links: ["Market Insights", "Investor Education", "Disclosure", "Privacy Policy"]
+    links: [
+      { label: "Market Insights", href: "/market-data" },
+      { label: "Investor Education", href: "/market-data" },
+      { label: "Disclosure", href: "#" },
+      { label: "Privacy Policy", href: "#" }
+    ]
   }
 ];
 

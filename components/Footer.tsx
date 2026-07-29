@@ -49,13 +49,13 @@ export function Footer() {
             <h3 className="text-sm font-bold uppercase tracking-widest champagne-gradient-text">{column.title}</h3>
             <ul className="mt-8 space-y-4 text-[15px] text-[#ffffff]/70">
               {column.links.map((link) => (
-                <li key={link}>
+                <li key={link.label}>
                   <MotionA 
-                    href="#contact" 
+                    href={link.href} 
                     className="inline-block transition-colors hover:text-[#ffffff]"
                     whileHover={{ x: 4, color: "#ffffff" }}
                   >
-                    {link}
+                    {link.label}
                   </MotionA>
                 </li>
               ))}

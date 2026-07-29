@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Target, ShieldCheck, TrendingUp, FileCheck, Users, PieChart, ArrowRight, Quote } from 'lucide-react';
+import { Target, ShieldCheck, TrendingUp, FileCheck, Users, PieChart, ArrowRight, Quote, Compass, UserCog, Lightbulb, HandCoins, Globe, Landmark } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -225,16 +225,177 @@ const AboutUs = () => {
             </div>
 
           </div>
-          
-          <div className="mt-16 pt-8 border-t border-navy/10 flex items-start space-x-3 max-w-4xl mx-auto">
-            <ShieldCheck className="text-indigo-600 flex-shrink-0 mt-0.5" size={20} />
-            <p className="text-xs text-ink-muted leading-relaxed">
-              <sup className="mr-0.5">1</sup>Investments are subject to market risks. Please read all scheme related documents carefully.<br/>
-              Shiv Mudra Wealth Management LLP is a SEBI Registered Investment Advisor (INA000XXXXXX).
+        </div>
+      </section>
+
+      {/* Section 5 - Our Philosophy */}
+      <section id="philosophy" className="bg-navy py-16 lg:py-24 text-white relative overflow-hidden">
+        {/* Subtle background lines/gradient to match design */}
+        <div className="absolute right-0 top-0 h-full w-1/2 opacity-20 pointer-events-none">
+          <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="w-full h-full stroke-gold stroke-[0.2] fill-none">
+            <path d="M50,100 Q75,50 100,0" />
+            <path d="M60,100 Q80,50 100,10" />
+            <path d="M70,100 Q85,50 100,20" />
+            <path d="M80,100 Q90,50 100,30" />
+            <path d="M90,100 Q95,50 100,40" />
+          </svg>
+        </div>
+        
+        <div className="section-shell relative z-10 flex flex-col lg:flex-row gap-12 lg:gap-8">
+          <div className="w-full lg:w-1/3 lg:pr-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Our Philosophy</h2>
+            <p className="text-white/80 text-sm md:text-base mb-4 leading-relaxed">
+              At Shiv Mudra, we believe wealth is more than numbers &mdash; it&apos;s the freedom to live your life on your terms.
             </p>
+            <p className="text-white/80 text-sm md:text-base leading-relaxed">
+              Our philosophy is built on five timeless principles that guide every decision we take for our clients.
+            </p>
+          </div>
+          
+          <div className="w-full lg:w-2/3 grid grid-cols-2 md:grid-cols-5 gap-6 border-t border-white/10 lg:border-t-0 lg:border-l lg:border-white/10 pt-8 lg:pt-0 lg:pl-8">
+            
+            <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+              <div className="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center text-gold mb-4">
+                <Compass size={24} />
+              </div>
+              <h4 className="text-sm font-bold text-white mb-2">Integrity</h4>
+              <p className="text-xs text-white/70 leading-relaxed">
+                We do what is right, not what is easy. Trust is the foundation of every relationship.
+              </p>
+            </div>
+            
+            <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+              <div className="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center text-gold mb-4">
+                <UserCog size={24} />
+              </div>
+              <h4 className="text-sm font-bold text-white mb-2">Discipline</h4>
+              <p className="text-xs text-white/70 leading-relaxed">
+                We follow a disciplined investment process that removes emotion and focuses on long-term outcomes.
+              </p>
+            </div>
+            
+            <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+              <div className="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center text-gold mb-4">
+                <Lightbulb size={24} />
+              </div>
+              <h4 className="text-sm font-bold text-white mb-2">Clarity</h4>
+              <p className="text-xs text-white/70 leading-relaxed">
+                We simplify complex markets and help you make clear, well-informed decisions.
+              </p>
+            </div>
+            
+            <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+              <div className="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center text-gold mb-4">
+                <HandCoins size={24} />
+              </div>
+              <h4 className="text-sm font-bold text-white mb-2">Commitment</h4>
+              <p className="text-xs text-white/70 leading-relaxed">
+                We are committed to your goals and stand with you at every step.
+              </p>
+            </div>
+            
+            <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+              <div className="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center text-gold mb-4">
+                <TrendingUp size={24} />
+              </div>
+              <h4 className="text-sm font-bold text-white mb-2">Growth</h4>
+              <p className="text-xs text-white/70 leading-relaxed">
+                We aim to grow your wealth sustainably and create a lasting legacy for you.
+              </p>
+            </div>
+            
           </div>
         </div>
       </section>
+
+      {/* Section 6 - Stats and CTA */}
+      <section className="w-full bg-[#FAFAF8] relative z-20 flex flex-col">
+        {/* Stats Bar */}
+        <div className="w-full pt-8 pb-12">
+          <div className="section-shell">
+            <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-navy/5 p-8 w-full">
+              <div className="flex flex-wrap justify-between items-center gap-y-8 gap-x-4">
+                
+                <div className="flex items-center space-x-4">
+                  <div className="text-[#4D388C]">
+                    <PieChart size={36} strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <h4 className="text-xl md:text-2xl font-bold text-navy leading-none mb-1">₹500Cr+</h4>
+                    <p className="text-xs font-medium text-ink-muted">Assets Managed&sup1;</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center space-x-4">
+                  <div className="text-[#4D388C]">
+                    <Users size={36} strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <h4 className="text-xl md:text-2xl font-bold text-navy leading-none mb-1">10,000+</h4>
+                    <p className="text-xs font-medium text-ink-muted">Happy Clients</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center space-x-4">
+                  <div className="text-[#4D388C]">
+                    <ShieldCheck size={36} strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <h4 className="text-xl md:text-2xl font-bold text-navy leading-none mb-1">15+</h4>
+                    <p className="text-xs font-medium text-ink-muted">Years of Experience</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center space-x-4">
+                  <div className="text-[#4D388C]">
+                    <Globe size={36} strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <h4 className="text-xl md:text-2xl font-bold text-navy leading-none mb-1">25+</h4>
+                    <p className="text-xs font-medium text-ink-muted">Expert Advisors</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center space-x-4">
+                  <div className="text-[#4D388C]">
+                    <Landmark size={36} strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <h4 className="text-xl md:text-2xl font-bold text-navy leading-none mb-1">SEBI</h4>
+                    <p className="text-xs font-medium text-ink-muted">Registered Advisor</p>
+                    <p className="text-[10px] text-ink-muted leading-tight">INA000XXXXXX</p>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Purple CTA Bar */}
+        <div className="w-full bg-[#4D388C] py-10 text-white">
+          <div className="section-shell flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="text-center md:text-left">
+              <h3 className="text-xl md:text-2xl font-medium mb-1">Your financial journey deserves the right partner.</h3>
+              <p className="text-white/90 text-lg">Let&apos;s build your wealth, together.</p>
+            </div>
+            <Link href="#contact" className="bg-[#D8BE8A] hover:bg-[#C5AA76] text-navy font-semibold py-3.5 px-8 rounded transition-colors whitespace-nowrap shadow-md inline-flex items-center">
+              Book a Free Consultation
+              <ArrowRight size={18} className="ml-2" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Disclaimer */}
+      <div className="w-full bg-[#FAFAF8] py-8 border-t border-gray-200">
+        <div className="section-shell">
+          <p className="text-xs text-ink-muted leading-relaxed">
+            <sup className="mr-0.5">1</sup>Investments are subject to market risks. Please read all scheme related documents carefully.<br/>
+            Shiv Mudra Wealth Management LLP is a SEBI Registered Investment Advisor (INA000XXXXXX).
+          </p>
+        </div>
+      </div>
 
     </div>
   );
